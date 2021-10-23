@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <script>
+
+
+console.log(`
+     1. To find greatest among three numbers.
+     2. To display even numbers less than 20.
+     3. To find area of a triangle
+     4. To find if the entered year is a leap year or not
+     5. To display a table of number n.
+     6. To find the entered number is a perfect number or not.`
+    )
+        var ch=parseInt(prompt("Enter the Choice:"));
+        switch(ch)
+        {
+            case 1:
+                var a = parseInt(prompt("Enter 1st Number"));
+                var b = parseInt(prompt("Enter 2nd Number"));
+                var c = parseInt(prompt("Enter 3rd Number"));
+                if (a>b && a>c) {
+                    console.log("Greatest number is "+ a);
+                    
+                } else if (b>c && b>a) {
+                    console.log("Greatest number is:" + b);
+                } else {
+                    console.log("Greatest number is:" + c);
+                }
+                break;
+            
+            case 2:
+                
+                for ( i =1; i<=20; i++){
+                    if(i % 2 == 0){
+                        console.log(i);
+                }
+            }
+            break;
+
+            case 3:
+                var a = parseInt(prompt("Enter Base value"))
+                var b = parseInt(prompt("Enter Height value"))
+
+                c = (a * b)/2
+
+                console.log(c)
+
+                break;
+
+            case 4:
+                var year = parseInt(prompt("Enter the year"))
+
+                if ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0)) {
+                    console.log(year + ' is a leap year');
+                } else {
+                    console.log(year + ' is a not leap year');
+                }
+                break;
+
+            case 5:
+                const number = parseInt(prompt('Enter an integer: '));
+
+                for(let i = 1; i <= 10; i++) {
+                const result = i * number;
+                console.log(`${number * i} = ${result}`);
+            }
+            break;
+
+            case 6:
+                var value = parseInt(prompt("Enter the number"));
+                var temp = 0;
+
+                for (var i=1;i<=value/2;i++){
+                    if(value%2 == 0){
+                        temp += i;
+                    }
+                }
+               
+                if (temp == value && temp != 0){
+                    console.log(" It is a perfect Number")
+                } else {
+                    console.log("It is not a perfect number")
+                }
+             break;
+                
+        }
+        </script>
+
+</body>
+</html>
